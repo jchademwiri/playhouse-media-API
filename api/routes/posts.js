@@ -1,13 +1,18 @@
 const express = require('express');
-const { updateOne } = require('../../models/Post');
+// const moment = require('moment');
+
 const Post = require('../../models/Post');
 const router = express.Router();
+
+// const todayDate = new Date();
+// const postDate = moment(todayDate, 'DD-MM-YYYY').format('MM-DD-YYYY');
 
 // GET ALL POSTS
 router.get('/', async (req, res) => {
 	try {
 		const posts = await Post.find();
 		res.json(posts);
+		console.log(posts);
 	} catch (err) {
 		res.json({ message: err });
 	}
@@ -19,6 +24,7 @@ router.post('/', async (req, res) => {
 		title: req.body.title,
 		description: req.body.description,
 		author: req.body.author,
+		
 	});
 	try {
 		const savedPost = await post.save();
