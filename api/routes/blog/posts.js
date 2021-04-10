@@ -12,7 +12,7 @@ router.get('/', async (req, res) => {
 	try {
 		const posts = await Post.find();
 		res.json(posts);
-		console.log(posts);
+		// console.log(posts);
 	} catch (err) {
 		res.json({ message: err });
 	}
