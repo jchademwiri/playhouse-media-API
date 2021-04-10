@@ -29,10 +29,10 @@ app.use(`./blog`, express.static(`${__dirname}public/blog`));
 // })
 
 // Import Routes
-const postRoute = require('./api/routes/posts');
+const postRoute = require('./api/routes/blog/posts');
 // const postRoute = require('./routes/posts');
 
-app.use('/api/posts', postRoute);
+app.use('/api/blog/posts', postRoute);
 // app.use('/posts', postRoute);
 
 // API Routes

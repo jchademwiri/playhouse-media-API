@@ -1,7 +1,7 @@
 const express = require('express');
 // const moment = require('moment');
 
-const Post = require('../../models/Post');
+const Post = require('../../../models/Post');
 const router = express.Router();
 
 // const todayDate = new Date();
@@ -24,7 +24,6 @@ router.post('/', async (req, res) => {
 		title: req.body.title,
 		description: req.body.description,
 		author: req.body.author,
-		
 	});
 	try {
 		const savedPost = await post.save();
