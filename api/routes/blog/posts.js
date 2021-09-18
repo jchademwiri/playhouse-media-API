@@ -1,16 +1,17 @@
 const express = require('express');
-// const moment = require('moment');
 
-const Post = require('../../../models/Post');
+
+const Post = require('../../../models/blog/Post');
 const router = express.Router();
 
-// const todayDate = new Date();
-// const postDate = moment(todayDate, 'DD-MM-YYYY').format('MM-DD-YYYY');
+
 
 // GET ALL POSTS
 router.get('/', async (req, res) => {
 	try {
-		const posts = await Post.find();
+		const posts = await Post.find({}).sort({
+			date: -1,
+		});
 		res.json(posts);
 		// console.log(posts);
 	} catch (err) {
