@@ -77,11 +77,15 @@ mongoose
 // ==========================================
 
 // views
-app.set(`views`, `./views`);
-app.set('view engine', 'ejs');
+// app.set(`views`, `./views`);
+// app.set('view engine', 'ejs');
+
+// app.get(``, (_req, res) => {
+// 	res.render(`index`, { text: `Home!` });
+// });
 
 app.get(``, (_req, res) => {
-	res.render(`index`, { text: `Home!` });
+	res.send(`home page`);
 });
 
 // app.get(`/api`, (_req, res) => {
