@@ -44,6 +44,8 @@ app.use('/api/blog/posts', postRoute);
 
 // Connect to DB
 
+// heroku_url = process.env.MONGODB_URI; 
+
 // mongoose.connect(process.env.DB_CONNECTION, { useNewUrlParser: true }, () => {
 // 	console.log('Connected to Database');
 // });
