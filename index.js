@@ -91,7 +91,7 @@ app.get(``, (_req, res) => {
 // });
 
 app.get(`/api`, (_req, res) => {
-	res.render(`api`, { text: `WE ARE here on API now!` });
+	res.render(`api`, { text: `WE ARE here on API SOON!` });
 });
 
 // app.get(`/api`, (_req, res) => {
@@ -99,9 +99,13 @@ app.get(`/api`, (_req, res) => {
 // });
 
 app.get(`/projects`, (_req, res) => {
-	res.render(`projects`, { text: `WE ARE COMING now!` });
+	res.render(`projects`, { text: `WE ARE COMING SOON!` });
 });
 
 app.get(`/contact`, (_req, res) => {
-	res.render(`contact`, { text: `WE ARE COMING now!` });
+	res.render(`contact`, { text: `WE ARE COMING SOON!` });
+});
+
+app.get(`/about`, (_req, res) => {
+	res.render(`about`, { text: `WE ARE COMING SOON!` });
 });
