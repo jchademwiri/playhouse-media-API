@@ -4,7 +4,7 @@
 	"description": "Playhouse Media, a web development and cloud solutions company",
 	"main": "index.js",
 	"scripts": {
-		"test": "nodemon server.js",
+		"dev": "nodemon server.js",
 		"start": "node server.js"
 	},
 	"keywords": [
