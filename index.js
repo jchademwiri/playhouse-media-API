@@ -79,28 +79,29 @@ mongoose
 // ==========================================
 
 // views
-// app.set(`views`, `./views`);
-// app.set('view engine', 'ejs');
-
-// app.get(``, (_req, res) => {
-// 	res.render(`index`, { text: `Home!` });
-// });
+app.set(`views`, `./views`);
+app.set('view engine', 'ejs');
 
 app.get(``, (_req, res) => {
-	res.send(`home page`);
+	res.render(`index`, { text: `Home!` });
 });
 
-// app.get(`/api`, (_req, res) => {
-// 	res.render(`api`, { text: `WE ARE here on API now!` });
+// app.get(``, (_req, res) => {
+// 	res.send(`home page`);
 // });
 
 app.get(`/api`, (_req, res) => {
-	res.render(`api`, { text: `Our API.` });
+	res.render(`api`, { text: `WE ARE here on API now!` });
 });
-// app.get(`/projects`, (_req, res) => {
-// 	res.render(`projects`, { text: `WE ARE COMING now!` });
+
+// app.get(`/api`, (_req, res) => {
+// 	res.render(`api`, { text: `Our API.` });
 // });
 
-// app.get(`/contact`, (_req, res) => {
-// 	res.render(`contact`, { text: `WE ARE COMING now!` });
-// });
+app.get(`/projects`, (_req, res) => {
+	res.render(`projects`, { text: `WE ARE COMING now!` });
+});
+
+app.get(`/contact`, (_req, res) => {
+	res.render(`contact`, { text: `WE ARE COMING now!` });
+});
